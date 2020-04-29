@@ -44,8 +44,8 @@ describe("enhancer function", () => {
     })
 
     describe("failure", () => {
-        it("should decrease durability by 5 if enhancement is < 15", () => {
-            expect(fail(sword)).toEqual({ ...sword, durability: 5 })
+        it("should decrease durability by 5 if enhancement is < 15 AND durability > 4", () => {
+            expect(fail(sword)).toEqual({ ...sword, durability: 0 })
         })
 
         it("should decrease durability by 10 if enhancement is >= 15", () => {

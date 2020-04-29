@@ -18,7 +18,9 @@ function fail(item) {
   const failure_2 = item.durability - 10
   const failure_3 = item.enhancement - 1
 
-  if (item.enhancement < 15 && item.durability > 4) {
+  if (item.enhancement < 15 && item.durability < 5) {
+    return ({ ...item, durability: 0})
+  } else if (item.enhancement < 15 && item.durability > 4) {
     return ({ ...item, durability: failure })
   } else if (item.enhancement >= 15) {
     return ({ ...item, durability: failure_2 })

@@ -4,7 +4,7 @@ const { repair, succeed, fail } = require('./enhancer.js');
 const sword = {
     name: "Holy Sword",
     enhancement: 10,
-    durability: 10
+    durability: 4
 }
 
 const perfectSword = {
